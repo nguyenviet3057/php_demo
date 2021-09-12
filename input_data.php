@@ -16,12 +16,12 @@ $password = $_POST['password'];
 $connect = new mysqli("localhost", "root", "", "php_demo");
 
 //cho phep luu dang uicode vao database
-mysqli_set_charset($connect, "utf8");
-if($connect->connect_error)
-{
-    var_dump($connect->connect_error);
-    die();
-}
+// mysqli_set_charset($connect, "utf8");
+// if($connect->connect_error)
+// {
+//     var_dump($connect->connect_error);
+//     die();
+// }
 
 //insert data into database
 $query = "INSERT INTO backend_demo(email, password) VALUE ('$email', '$password')";
@@ -29,3 +29,5 @@ mysqli_query($connect, $query);
 
 //endconnect
 $connect->close();
+
+header('Location: home_page.html');

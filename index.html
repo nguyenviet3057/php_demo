@@ -4,25 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/javascript" rel="stylesheet" href="./jquery.js" />
-    <link type="text/javascript" rel="stylesheet" href="./index.js" />
-    <title>Backend Test</title>
+    <link type="text/css" rel="stylesheet" href="index.css" />
+    <title>Home Page</title>
 </head>
 <body>
-    <form method="POST" action="input_data.php">
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+    <div id="header">
+        <div id="logo"></div>
+        <button id="login">Login</button>
+        <button id="register">Register</button>
+    </div>
+    <div id="screen">
+        <div id="panel">
+            <div id="panel_bg"></div>
+            <div class="reference">
+                <div id="home"></div>
+                <div class="panel_text">Home</div>
+            </div>
+            <div class="reference">
+                <div id="get_info"></div>
+                <div class="panel_text">Information</div>
+            </div>
+            <div class="reference">
+                <div id="contact"></div>
+                <div class="panel_text">Contact</div>
+            </div>
+            <div class="reference">
+                <div id="support"></div>
+                <div class="panel_text">Support</div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password">
+        <div id="information">
+            <div id="bg"></div>
+            <div id="home_p">
+                <div id="welcome">
+                    <h1 id="h1">Welcome to PlanX</h1>
+                    <h2 id="h2">This website is for making your own website to "flirt" your crush</h2>
+                    <p id="q1">Are you looking for something to impress your crush!?<br/>So why don't create a website?</p>
+                </div>
+                <div id="pre">
+                    <div id="q2">
+                        <div id="q2_bg"></div>
+                        <p id="q2_t">Let's take a look!</p>
+                    </div>
+                    <div id="pre_bg">
+                        <div id="preview">
+                            <video id="video" controls>
+                                <source src="./video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <p id="q3">How do you think? Give me your feedback in the contact</p>
+                </div>   
+            </div>
+            <div id="info_p">
+                <p id="q4">So, let's create your own website<br/>by entering your and your crush information in the form bellow:</p>
+                <form method="POST" action="info_data.php">
+                    <label for="fname1">Your fullname:</label>
+                    <input type="text" id="fname1" name="fname1"><br/><br/>
+                    <label for="fname2">Your crush's fullname:</label>
+                    <input type="text" id="fname2" name="fname2"><br/><br/>
+                    <label for="birthday">Your crush's date of birth:</label>
+                    <input type="date" id="birthday" name="birthday"><br/><br/>
+                    <label for="massage">Your massage:</label>
+                    <input type="text" id="massage" name="massage"><br/><br/>
+                </form>
+            </div>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
         </div>
-        <!-- <div>
-            <lable for="re_pwd">Reenter Password:</lable>
-            <input type="password" class="form-control" placeholder="Reenter password" id="re_pwd">
-        </div> -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
 </body>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </html>
