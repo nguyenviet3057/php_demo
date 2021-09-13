@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link type="text/css" rel="stylesheet" href="index.css" />
     <title>Home Page</title>
 </head>
@@ -15,20 +15,19 @@
     </div>
     <div id="screen">
         <div id="panel">
-            <div id="panel_bg"></div>
-            <div class="reference">
+            <div class="reference" id="home_r">
                 <div id="home"></div>
                 <div class="panel_text">Home</div>
             </div>
-            <div class="reference">
+            <div class="reference" id="info_r">
                 <div id="get_info"></div>
                 <div class="panel_text">Information</div>
             </div>
-            <div class="reference">
+            <div class="reference" id="contact_r">
                 <div id="contact"></div>
                 <div class="panel_text">Contact</div>
             </div>
-            <div class="reference">
+            <div class="reference" id="support_r">
                 <div id="support"></div>
                 <div class="panel_text">Support</div>
             </div>
@@ -57,25 +56,40 @@
                 </div>   
             </div>
             <div id="info_p">
-                <p id="q4">So, let's create your own website<br/>by entering your and your crush information in the form bellow:</p>
-                <form method="POST" action="info_data.php">
-                    <label for="fname1">Your fullname:</label>
-                    <input type="text" id="fname1" name="fname1"><br/><br/>
-                    <label for="fname2">Your crush's fullname:</label>
-                    <input type="text" id="fname2" name="fname2"><br/><br/>
-                    <label for="birthday">Your crush's date of birth:</label>
-                    <input type="date" id="birthday" name="birthday"><br/><br/>
-                    <label for="massage">Your massage:</label>
-                    <input type="text" id="massage" name="massage"><br/><br/>
-                </form>
+                <div id="info_bg">
+                    <p id="q4">So, let's create your own website<br/>by entering your and your crush information in the form bellow:</p>
+                    <form method="POST" action="input_data.php" id="form">
+                        <div class="divide">
+                            <label for="fname1" class="label">Your fullname:</label>
+                            <input type="text" class="input" id="fname1" name="fname1" required>
+                        </div>
+                        <div class="divide">
+                            <label for="fname2" class="label">Your crush's fullname:</label>
+                            <input type="text" class="input" id="fname2" name="fname2" required>
+                        </div>
+                        <div class="divide">
+                            <label for="birthday" class="label">Your crush's date of birth:</label>
+                            <input type="date" class="input" id="birthday" name="birthday" required>
+                        </div>
+                        <div class="divide">
+                            <label for="massage" class="label">Your massage:</label>
+                            <textarea class="input" id="massage" name="massage" placeholder="No need to fill if you don't want"></textarea>
+                        </div>
+                        <div class="divide" id="button">
+                            <button id="submit" type="submit">Submit!</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
-            <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            <div id="contact_p">
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+                <p id="q4">So, let's create your own website<br/><br/><br/><br/>by entering your and your crush information in the form bellow:</p>
+            </div>
         </div>
     </div>
 </body>

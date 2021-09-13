@@ -1,5 +1,6 @@
+var check = 0;
 var y = $("#q2_t").offset().top + parseInt($("#pre_bg").css("height"));
-var z = document.getElementById("welcome").offsetHeight+document.getElementById("pre").offsetHeight+300;
+var z = document.getElementById("welcome").offsetHeight+document.getElementById("pre").offsetHeight+230;
 $("#home_p").css("height",z+"px");
 $("#information").scroll(function(){
     var check = 0;
@@ -27,6 +28,7 @@ $("#information").scroll(function(){
     if (document.getElementById("q2_bg").style.width == "100%"){
         $("#preview").css({"transition":"1s linear","height":"36vw"});
         $("#q2_t").css({"color":"white"});
+        $(".reference,#header").css("filter","invert(100%)");
         if (document.getElementById("q2_t").style.color == "white"){
                 $("#q3").css("visibility","visible");
         };
@@ -39,6 +41,7 @@ $("#information").scroll(function(){
     };
     if ($("#preview").offset().top <= 100 || document.getElementById("preview").style.height != "36vw"){
         document.getElementById("video").pause();
+        $(".reference,#header").css("filter","none");
     }else if ($("#preview").offset().top <= 200){
         document.getElementById("video").play();
     };
@@ -51,22 +54,44 @@ $("#video").click(function(){
 });
 $("#home").click(function(){
     $("#bg").css({"visibility":"hidden"});
+    $(".reference,#header").css("transition-delay","0.25s"); // = transition-duration to prevent scrollIntoview bad transition
     document.getElementById("home_p").scrollIntoView({behavior:"smooth"});
     setTimeout(function(){
         $("#bg").css({"visibility":"visible"});
+        $(".reference,#header").css("transition-delay","0s");
     },750);
 });
 $("#get_info").click(function(){
     $("#bg").css({"visibility":"hidden"});
+    $(".reference,#header").css("transition-delay","0.25s"); // = transition-duration to prevent scrollIntoview bad transition
     document.getElementById("info_p").scrollIntoView({behavior:"smooth"});
     setTimeout(function(){
         $("#bg").css({"visibility":"visible"});
         $("#q2").css({"visibility":"visible"});
+        $(".reference,#header").css("transition-delay","0s");
     },750);
 });
 $("#support").click(function(){
     alert($("#home_p").css("height"));
 });
+// $("#contact").click(function(){
+//     alert(document.getElementById("q2_t").style.color);
+// });
+$("#home_r").mouseover(function(){
+    $(this).css("filter","invert(100%)");
+});
+$("#info_r").mouseover(function(){
+    $(this).css("filter","invert(100%)");
+});
+$("#contact_r").mouseover(function(){
+    $(this).css("filter","invert(100%)");
+});
+$("#support_r").mouseover(function(){
+    $(this).css("filter","invert(100%)");
+});
+$(".reference").mouseout(function(){
+    $(this).css("filter","none");
+});
 $("#contact").click(function(){
-    alert(z);
+    document.getElementById("contact_p").scrollIntoView({behavior:"smooth"});
 });

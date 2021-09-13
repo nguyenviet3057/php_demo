@@ -3,8 +3,10 @@
 // session_start();
 // var_dump($_POST);
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$n1 = $_POST['fname1'];
+$n2 = $_POST['fname2'];
+$bd = $_POST['birthday'];
+$ms = $_POST['massage'];
 
 // echo 'Email : '.$email.'<br/>';
 // echo 'Password : '.$password.'<br/>';
@@ -24,10 +26,10 @@ $connect = new mysqli("localhost", "root", "", "php_demo");
 // }
 
 //insert data into database
-$query = "INSERT INTO backend_demo(email, password) VALUE ('$email', '$password')";
+$query = "INSERT INTO data(fullname, crush, birthday, massage) VALUE ('$n1','$n2','$bd','$ms')";
 mysqli_query($connect, $query);
 
 //endconnect
 $connect->close();
 
-header('Location: home_page.html');
+header('Location: index.html');
