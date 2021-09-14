@@ -1,3 +1,5 @@
+var check = 0;
+// var d = 0;
 var x = 0;
 var y = $("#q2_t").offset().top + parseInt($("#pre_bg").css("height"));
 var z = document.getElementById("welcome").offsetHeight+document.getElementById("pre").offsetHeight+230;
@@ -46,30 +48,44 @@ $("#information").scroll(function(){
         $("#bg").css({"opacity":Math.max(0.75-0.0015*(x-y), 0)});
         $(".reference,#header").css({"filter":"invert("+Math.max(1-0.002*(x-y), 0)+")"});
     };
+    // document.getElementById("s_t").innerHTML = x;
 });
 $("#video").click(function(){
     document.getElementById("video").play();
 });
 $("#h_r").click(function(){
+    // check = 1;
     $("#bg").css({"visibility":"hidden"});
     document.getElementById("home_p").scrollIntoView({behavior:"smooth"});
     setTimeout(function(){
         $("#bg").css({"visibility":"visible"});
+        check = 0;
     },750);
 });
 $("#i_r").click(function(){
+    // check = 1;
     $("#bg").css({"visibility":"hidden"});
     document.getElementById("info_p").scrollIntoView({behavior:"smooth"});
     setTimeout(function(){
         $("#bg").css({"visibility":"visible"});
         $("#q2").css({"visibility":"visible"});
+        check = 0;
     },750);
 });
 $("#h_r").mouseover(function(){
     $(this).css("backdrop-filter","invert(1)");
+
+    // $("#information").scroll(function(){
+    // });
 });
 $("#i_r").mouseover(function(){
+
     $(this).css("backdrop-filter","invert(1)");
+
+    // $("#information").scroll(function(){
+    //     // alert("scroll");
+    //     var inv = 1-parseFloat($("#home_r").css("filter").replace("invert(",""));
+    // });
 });
 $("#c_r").mouseover(function(){
     $(this).css("backdrop-filter","invert(1)");
@@ -91,9 +107,12 @@ $("#c_r").mouseout(function(){
 });
 $("#s_r").mouseout(function(){
     $(this).css("backdrop-filter","invert(0)");
+
 });
 $("#c_r").click(function(){
     document.getElementById("contact_p").scrollIntoView({behavior:"smooth"});
 });
 $("#s_r").click(function(){
+    // check = 1;
+    // alert(parseFloat($("#home_r").css("filter").replace("invert(","")));
 });
