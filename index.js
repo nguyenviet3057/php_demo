@@ -108,10 +108,5 @@ $("#c_r").click(function(){
     document.getElementById("contact_p").scrollIntoView({behavior:"smooth"});
 });
 $("#s_r").click(function(){
-<<<<<<< HEAD
     // alert($("#home_p").css("height"));
 });
-=======
-    alert(document.getElementById("video").paused);
-});
->>>>>>> c9fe56a4cbb1887ef618091ef74a1df2f786e27d
